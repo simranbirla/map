@@ -1,9 +1,9 @@
 import React from "react";
 import Map from "./Map";
+import "../Styling/index.css";
 const App = () => {
   return (
     <div>
-      Hello this is MAP
       <Map />
     </div>
   );
