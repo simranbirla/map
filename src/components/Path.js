@@ -21,6 +21,7 @@ const Path = ({ data }) => {
 
   return (
     <div>
+      <h2>MST</h2>
       {out
         ? out.map((place, index) => {
             return (

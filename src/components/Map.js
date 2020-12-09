@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
+import LocationOnIcon from "@material-ui/icons/LocationOn";
 import ReactMapGL, { Marker, Popup } from "react-map-gl";
+import "../Styling/Places.css";
 
 const Map = ({ dark, data }) => {
   const [viewport, setViewport] = useState({
     latitude: 18.711,
     longitude: 72.83,
-    width: "100vw",
-    height: "50vh",
+    width: "98vw",
+    height: "80vh",
     zoom: 10,
   });
   const [selectedPark, setSelectedPark] = useState(null);
@@ -54,7 +56,10 @@ const Map = ({ dark, data }) => {
                     setSelectedPark(park);
                   }}
                 >
-                  HERE
+                  <LocationOnIcon
+                    fontSize="large"
+                    color={dark ? "inherit" : "primary"}
+                  />
                 </button>
               </Marker>
             ))

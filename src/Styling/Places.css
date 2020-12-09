@@ -1,0 +1,38 @@
+.places {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  column-gap: 10px;
+  justify-content: space-evenly;
+  align-content: center;
+  padding: 5px;
+  text-align: center;
+}
+
+.places img {
+  width: 250px;
+  height: 250px;
+  padding: 5px;
+}
+
+.places p {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.places__main {
+  border: 5px solid rgb(106, 162, 247);
+}
+
+button:focus,
+button:active {
+  outline: none;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+button svg {
+  color: #a0b6ac;
+}

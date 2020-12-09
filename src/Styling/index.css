@@ -3,3 +3,23 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  background-color: whitesmoke;
+}
+
+.dark {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: transparent;
+  font-size: 2em;
+  padding: 10px 20px;
+  z-index: 2;
+  border: none;
+  cursor: pointer;
+}
+
+.dark:focus {
+  outline: none;
+}
