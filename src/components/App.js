@@ -17,11 +17,17 @@ const App = () => {
       <Path data={places} />
       <button
         onClick={() =>
-          data.push({
-            Name: "Kalyan",
-            Latitude: 19.24,
-            Longitude: 73.123,
-          })
+          setPlaces([
+            ...places,
+            {
+              Name: "Kalyan",
+              Latitude: 19.24,
+              Longitude: 73.123,
+              image:
+                "https://upload.wikimedia.org/wikipedia/commons/9/9f/Kalyan_Junction_railway_station_-_Stationboard.jpg",
+              id: places.length + 1,
+            },
+          ])
         }
       >
         Add

@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import kruskal_algo from "./kruskal_algo";
-import { data } from "./data";
 import kruskal_arr from "./distanceMatrix";
 
-const Path = () => {
+const Path = ({ data }) => {
   const [out, setOut] = useState();
   const [weight, setWeight] = useState();
   useEffect(() => {
-    const output = kruskal_algo(kruskal_arr, data.length);
+    const matrix = kruskal_arr(data);
+    const output = kruskal_algo(matrix, data.length);
     const distance = output.reduce((acc, val) => {
       return { weight: acc.weight + val.weight };
     });
@@ -25,7 +25,7 @@ const Path = () => {
         ? out.map((place, index) => {
             return (
               <div key={index}>
-                {data[place.source].Name} === {data[place.destination].Name}
+                {data[place.source].Name} go to {data[place.destination].Name}
               </div>
             );
           })
