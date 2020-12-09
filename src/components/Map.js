@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ReactMapGL, { Marker, Popup } from "react-map-gl";
-import { data } from "./data";
 
-const Map = ({ dark }) => {
+const Map = ({ dark, data }) => {
   const [viewport, setViewport] = useState({
     latitude: 18.711,
     longitude: 72.83,

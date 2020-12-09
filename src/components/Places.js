@@ -1,7 +1,6 @@
 import React from "react";
-import { data } from "./data";
 
-const Places = () => {
+const Places = ({ data }) => {
   const places = data
     ? data.map((place) => {
         return (
