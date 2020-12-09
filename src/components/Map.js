@@ -31,7 +31,7 @@ const Map = ({ dark, data }) => {
   }, []);
 
   return (
-    <div>
+    <div className="map">
       <ReactMapGL
         {...viewport}
         mapboxApiAccessToken={
@@ -75,7 +75,7 @@ const Map = ({ dark, data }) => {
           >
             <div>
               <h2>{selectedPark.Name}</h2>
-              <img src={selectedPark.image} />
+              <img src={selectedPark.image} width="250px" height="250px" />
             </div>
           </Popup>
         ) : null}

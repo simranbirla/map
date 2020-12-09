@@ -5,6 +5,7 @@ import Backdrop from "@material-ui/core/Backdrop";
 import Fade from "@material-ui/core/Fade";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
+import "../Styling/Places.css";
 
 const useStyles = makeStyles((theme) => ({
   modal: {
@@ -85,8 +86,7 @@ export default function TransitionsModal({ open, setOpen, data, setData }) {
               />
               <input
                 className="outlined-basic"
-                label="latitude"
-                variant="outlined"
+                placeholder="Enter latitude"
                 required
                 type="number"
                 step="any"
@@ -94,8 +94,7 @@ export default function TransitionsModal({ open, setOpen, data, setData }) {
               />
               <input
                 type="number"
-                label="longitude"
-                variant="outlined"
+                placeholder="Enter longitude"
                 required
                 step="any"
                 onChange={(e) => inputChange(e, "Longitude")}

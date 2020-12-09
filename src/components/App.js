@@ -29,8 +29,13 @@ const App = () => {
       </button>
       <Map dark={dark} data={places} />
       <Places data={places} dark={dark} />
-      <Path data={places} />
-      <Button variant="contained" color="primary" onClick={() => setOpen(true)}>
+      <Path data={places} dark={dark} />
+      <Button
+        variant="contained"
+        color="primary"
+        onClick={() => setOpen(true)}
+        className="add__btn"
+      >
         Add data
       </Button>
       <AddData

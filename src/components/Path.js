@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import kruskal_algo from "./kruskal_algo";
 import kruskal_arr from "./distanceMatrix";
 
-const Path = ({ data }) => {
+const Path = ({ data, dark }) => {
   const [out, setOut] = useState();
   const [weight, setWeight] = useState();
   useEffect(() => {
@@ -20,18 +20,24 @@ const Path = ({ data }) => {
   }, [data]);
 
   return (
-    <div>
-      <h2>MST</h2>
+    <div
+      className="mst"
+      style={dark ? { color: "#61C8A4" } : { color: "black" }}
+    >
+      <h2>MST : Reach all places in less time</h2>
+      <h3>
+        Map the places on the map and travel accordingly for lesser distance
+      </h3>
       {out
         ? out.map((place, index) => {
             return (
-              <div key={index}>
-                {data[place.source].Name} go to {data[place.destination].Name}
+              <div key={index} className="mst__div">
+                {data[place.source].Name} go to {data[place.destination].Name}{" "}
               </div>
             );
           })
         : null}
-      <h3>{weight ? weight + " km " : null}</h3>
+      <h3>Total Distance :{weight ? weight + " km " : null}</h3>
     </div>
   );
 };
