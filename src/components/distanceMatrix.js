@@ -1,5 +1,4 @@
 import distace from "./distance";
-import { data } from "./data";
 
 const kruskal_matrix = (data) => {
   var kruskal_arr = [];

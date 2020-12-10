@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Button from "@material-ui/core/Button";
 import Map from "./Map";
 import Places from "./Places";
 import "../Styling/index.css";
@@ -8,6 +7,7 @@ import { data } from "./data";
 import Path from "./Path";
 import WbSunnyIcon from "@material-ui/icons/WbSunny";
 import NightsStayIcon from "@material-ui/icons/NightsStay";
+import PlusIcon from "@material-ui/icons/AddCircle";
 
 const App = () => {
   const [dark, setDark] = useState(false);
@@ -28,16 +28,19 @@ const App = () => {
         )}
       </button>
       <Map dark={dark} data={places} />
-      <Places data={places} dark={dark} />
+      <Places data={places} dark={dark} setData={setPlaces} />
       <Path data={places} dark={dark} />
-      <Button
-        variant="contained"
-        color="primary"
+      <button
+        style={
+          dark
+            ? { color: "White", background: "#182F25" }
+            : { color: "black", background: "#87DDE8" }
+        }
         onClick={() => setOpen(true)}
         className="add__btn"
       >
-        Add data
-      </Button>
+        Add data <PlusIcon />
+      </button>
       <AddData
         open={open}
         setOpen={setOpen}

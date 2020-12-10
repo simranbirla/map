@@ -22,7 +22,17 @@ const Path = ({ data, dark }) => {
   return (
     <div
       className="mst"
-      style={dark ? { color: "#61C8A4" } : { color: "black" }}
+      style={
+        dark
+          ? {
+              color: "#61C8A4",
+            }
+          : {
+              color: "black",
+              boxShadow:
+                "2px 2px 2px rgba(0,0,0,0.5) , -2px -2px 2px rgba(0,0,0,0.5)",
+            }
+      }
     >
       <h2>MST : Reach all places in less time</h2>
       <h3>
@@ -30,11 +40,11 @@ const Path = ({ data, dark }) => {
       </h3>
       {out
         ? out.map((place, index) => {
-            return (
+            return data[place.source] && data[place.destination] ? (
               <div key={index} className="mst__div">
                 {data[place.source].Name} go to {data[place.destination].Name}{" "}
               </div>
-            );
+            ) : null;
           })
         : null}
       <h3>Total Distance :{weight ? weight + " km " : null}</h3>

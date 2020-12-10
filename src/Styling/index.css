@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+.app {
+  padding-bottom: 20px;
+}
+
 body {
   background-color: whitesmoke;
 }
@@ -22,4 +26,18 @@ body {
 
 .dark:focus {
   outline: none;
+}
+
+.add__btn {
+  padding: 10px 30px;
+  font-size: 15px;
+  font-weight: 800;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.add__btn svg {
+  color: black;
 }

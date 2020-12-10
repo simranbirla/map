@@ -1,8 +1,9 @@
 .places {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  column-gap: 10px;
-  padding: 5px;
+  column-gap: 20px;
+  row-gap: 20px;
+  padding: 10px;
   margin-top: 10px;
   text-align: center;
 }
@@ -19,7 +20,21 @@
 }
 
 .places__main {
-  border: 5px solid rgb(106, 162, 247);
+  box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.5), -4px -4px 2px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+.places__main button {
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  cursor: pointer;
+}
+
+.places__main button svg {
+  font-weight: 900;
+  font-size: 30px;
+  color: rgb(168, 3, 3);
 }
 
 button:focus,
@@ -48,21 +63,28 @@ h2 {
 
 .mst {
   padding: 10px;
-  margin: 10px;
+  margin: 20px auto;
+  width: 80%;
+  box-shadow: 2px 2px 2px rgba(255, 255, 255, 0.6),
+    -2px -2px 2px rgba(255, 255, 255, 0.6);
+  position: relative;
 }
 
 .mst h2 {
   line-height: 60px;
+  text-align: center;
 }
 
 .mst h3 {
   line-height: 35px;
   font-size: 1.8em;
+  text-align: center;
 }
 
 .mst__div {
   margin: 10px 0px;
   font-size: 18px;
+  text-align: center;
 }
 
 input[type="number"] {
@@ -71,8 +93,12 @@ input[type="number"] {
 }
 
 .add__btn {
-  position: absolute;
-  top: 20px;
-  right: 10px;
+  margin: 20px;
   z-index: 2;
+}
+
+@media (max-width: 500px) {
+  .mst {
+    text-align: left;
+  }
 }
